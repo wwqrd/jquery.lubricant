@@ -63,14 +63,23 @@
             'y': distanceFromCentre.y/this.maxDistance.y
         };
 
+        var j,
+            k = (this.options.depth-1);
+
         switch(this.options.tween) {
+            case 'quadratic':
+                j = k * k;
+                break;
             case 'parallax':
             default:
-                var offset = {
-                    'top': difference.y*(this.options.depth-1)*this.maxDistance.y,
-                    'left': difference.x*(this.options.depth-1)*this.maxDistance.x
-                };
+                j = k;
+                
         }
+
+        var offset = {
+            'top': difference.y*j*this.maxDistance.y,
+            'left': difference.x*j*this.maxDistance.x
+        };
         
         return offset;
     };
