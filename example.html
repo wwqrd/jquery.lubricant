@@ -1,0 +1,43 @@
+<!doctype html public>
+<!--[if lt IE 7]> <html lang="en-us" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>jquery.lubricate</title>
+
+	<meta name="viewport" content="width=device-width">
+
+	<style type="text/css">
+		body { background:#222; min-width: 2000px; min-height: 2000px; }
+		.lubricate { position: absolute; }
+		.background { top: 300px; left: 400px; background: #333; width: 700px; height: 700px; border-radius:700px; }
+		.sprite1 { top: 750px; left: 750px; background: #ff0; width: 200px; height: 200px; border-radius:200px; }
+		.sprite2 { top: 400px; left: 700px; background: #0ff; width: 200px; height: 200px; border-radius:200px; }
+		.sprite3 { top: 575px; left: 650px; background: #f0f; width: 200px; height: 200px; border-radius:200px; }
+		.sprite4 { top: 550px; left: 450px; background: #fff; width: 200px; height: 200px; border-radius:200px; }
+	</style>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="src/jquery.lubricant.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.background').lubricant({'depth':0.6});
+		$('.sprite1').lubricant({'depth':0.9});
+		$('.sprite2').lubricant({'depth':1});
+		$('.sprite3').lubricant({'depth':1.7});
+		$('.sprite4').lubricant({'depth':1.1});
+	});
+	</script>
+</head>
+<body>
+	<div class='background lubricate'></div>
+	<div class='sprite1 lubricate'></div>
+	<div class='sprite2 lubricate'></div>
+	<div class='sprite3 lubricate'></div>
+	<div class='sprite4 lubricate'></div>
+
+</body>
+</html>
