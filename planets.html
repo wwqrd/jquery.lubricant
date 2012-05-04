@@ -1,0 +1,75 @@
+<!doctype html public>
+<!--[if lt IE 7]> <html lang="en-us" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>jquery.lubricate</title>
+
+	<meta name="viewport" content="width=device-width">
+
+	<style type="text/css">
+		body { background:#222; min-height: 1000px;}
+		.container {  }
+		.lubricate { position: absolute; }
+
+		.sun { top: 294px; left: 50%; margin-left: -306px; background: #fff; width: 612px; height: 612px; border-radius: 612px; }
+		.mercury { top: 601px; left: 50%; margin-left: -1px; background: #f00; width: 2px; height: 2px; border-radius: 2px; }
+		.venus { top: 602px; left: 50%; margin-left: -2px; background: #ff0; width: 5px; height: 5px; border-radius: 5px; }
+		.earth { top: 603px; left: 50%; margin-left: -3px; background: #f0f; width: 6px; height: 6px; border-radius: 6px; }
+		.mars { top: 601px; left: 50%; margin-left: -1px; background: #555; width: 3px; height: 3px; border-radius: 3px; }
+		.jupiter { top: 631px; left: 50%; margin-left: -31px; background: #5f0; width: 63px; height: 63px; border-radius: 63px; }
+		.saturn { top: 625px; left: 50%; margin-left: -25px; background: #0f5; width: 51px; height: 51px; border-radius: 51px; }
+		.uranus { top: 610px; left: 50%; margin-left: -10px; background: #55f; width: 21px; height: 21px; border-radius: 21px; }
+		.neptune { top: 610px; left: 50%; margin-left: -10px; background: #f55; width: 20px; height: 20px; border-radius: 20px; }
+		.pluto { top: 600px; left: 50%; margin-left: 0px; background: #f5f; width: 1px; height: 1px; border-radius: 1px; }
+
+	</style>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="minified/jquery.lubricant.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.sun').lubricant({'depth':0, 'x':false, 'effect': "inverted"});
+		$('.mercury').lubricant({'depth':1, 'x':false, 'effect': "inverted"});
+		$('.venus').lubricant({'depth':1.87, 'x':false, 'effect': "inverted"});
+		$('.earth').lubricant({'depth':2.58, 'x':false, 'effect': "inverted"});
+		$('.mars').lubricant({'depth':3.98, 'x':false, 'effect': "inverted"});
+		$('.jupiter').lubricant({'depth':13.43, 'x':false, 'effect': "inverted"});
+		$('.saturn').lubricant({'depth':24.62, 'x':false, 'effect': "inverted"});
+		$('.uranus').lubricant({'depth':49.53, 'x':false, 'effect': "inverted"});
+		$('.neptune').lubricant({'depth':77.65, 'x':false, 'effect': "inverted"});
+		$('.pluto').lubricant({'depth':102.04, 'x':false, 'effect': "inverted"});
+
+	});
+	</script>
+</head>
+<body>
+	<div class='sun lubricate'></div>
+	<div class='mercury lubricate'></div>
+	<div class='venus lubricate'></div>
+	<div class='earth lubricate'></div>
+	<div class='mars lubricate'></div>
+	<div class='jupiter lubricate'></div>
+	<div class='saturn lubricate'></div>
+	<div class='uranus lubricate'></div>
+	<div class='neptune lubricate'></div>
+	<div class='pluto lubricate'></div>
+
+<div id='info'>
+Sun612.09
+Mercury	2.14			1
+Venus	5.32			1.87
+Earth	5.6				2.58
+Mars		2.97			3.93
+Jupiter	62.88			13.43
+Saturn	51.2			24.62
+Uranus	20.64			49.53
+Neptune	19.98			77.65
+Pluto	1				102.04
+</div>
+
+</body>
+</html>
