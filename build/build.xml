@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project basedir="../" default="compilejs">
+
+  <property name="src.path" location="src" />
+  <property name="build.path" location="build" />
+  <property name="minified.path" location="minified" />
+
+  <target name="compilejs" description="">
+    <delete>
+      <fileset dir="${minified.path}" includes="*.js" />
+    </delete>
+
+    <copy todir="${minified.path}/">
+        <fileset dir="${src.path}/" includes="*.js"/>
+    </copy>
+
+    <apply executable="java" parallel="false" failonerror="true">
+      <fileset dir="${minified.path}" includes="*.js"/>
+      <arg value="-jar" />
+      <arg value="${build.path}/closure.jar" />
+      <arg line="--js"/>
+      <srcfile/>
+      <arg line="--externs" />
+      <arg value="${build.path}/externs.js" />
+      <arg line="--warning_level VERBOSE" />
+      <arg line="--compilation_level ADVANCED_OPTIMIZATIONS" />
+      <arg line="--js_output_file" />
+      <mapper type="glob" from="*.js" to="${minified.path}/*.min.js"/>
+      <targetfile/>
+    </apply> 
+
+    <delete>
+      <fileset dir="${minified.path}" includes="*.js" excludes="*.min.js" />
+    </delete>
+
+  </target> 
+
+</project>
